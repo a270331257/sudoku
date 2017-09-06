@@ -12,6 +12,7 @@ void swap(int &a,int &b)
 
 int main()
 {
+FILE *file;
 int sodu1[9][9]=
 {
 3,6,7,2,5,4,9,8,1,
@@ -63,6 +64,7 @@ sodu4[9][9]=
 soduku[9][9];
 int row,line,i,j,chose,N;
 srand((unsigned) time(NULL));
+file=fopen("sudoku.txt","w");
 //*********************************************//
 scanf("%d",&N);
 if(N>1000000||N<0)
@@ -276,7 +278,7 @@ else
 }
 }
 //*********************************************//
-freopen("soduku.txt", "a+", stdout); 
+freopen("sudoku.txt", "a+", stdout); 
 for(i=0;i<9;i++)
 {
 for(j=0;j<9;j++)
